@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CubeSat ADCS Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- IMPORTANT -->
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
 
+<div class="topnav">
+  <h2>🛰️ CubeSat ADCS Ground Station</h2>
+</div>
+
+<div class="content">
+
+  <div class="cards">
+    <div class="card">
+      <p class="card-title">GYROSCOPE</p>
+      <p>X: <span id="gyroX"></span> rad</p>
+      <p>Y: <span id="gyroY"></span> rad</p>
+      <p>Z: <span id="gyroZ"></span> rad</p>
+      <p class="servo-text">Actuator Output: <span id="servo"></span> µs</p>
+      <p>Disturbance Threshold: <span id="threshold"></span></p>
+      <p>Disturbed: <span id="disturbed"></span></p>
+
+    </div>
+
+    <div class="card">
+      <p class="card-title">ACCELEROMETER</p>
+      <p>X: <span id="accX"></span> m/s²</p>
+      <p>Y: <span id="accY"></span> m/s²</p>
+      <p>Z: <span id="accZ"></span> m/s²</p>
+    </div>
+
+    <div class="card">
+      <p class="card-title">TEMPERATURE</p>
+      <p><span id="temp"></span> °C</p>
+
+      <p class="card-title">MODE</p>
+      <button id="free">FREE MODE</button>
+      <button id="stabilize">STABILIZE MODE</button>
+    </div>
+  </div>
+
+  <div class="cube-content">
+    <p class="card-title">3D SATELLITE ORIENTATION</p>
+    <div id="3Dcube"></div>
+    <div class="reset-buttons">
+      <button id="reset">RESET</button>
+      <button id="resetX">X</button>
+      <button id="resetY">Y</button>
+      <button id="resetZ">Z</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
